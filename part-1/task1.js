@@ -1,7 +1,7 @@
 const biodata = {
     name: "Nur Muhammad Alif Putra Setiawan",
     age: 21,
-    hobbies: ["Singing", "Watching Movies", "Playing Badminton"],
+    hobbies: ["Reading", "Watching Movies", "Playing Badminton"],
     isMarried: false,
     schoolList: [
         {
