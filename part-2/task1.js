@@ -1,12 +1,12 @@
 // 10 Method Built-in Function Array
 // 01. concat() : untuk menggabungkan nilai array.
-const fruit = ["apple", "orange", "grape"];
-const newFruit = ["starfruit", "pineapple", "watermelon"];
+const fruit = ['apple', 'orange', 'grape'];
+const newFruit = ['starfruit', 'pineapple', 'watermelon'];
 const fruits = fruit.concat(newFruit);
 console.log(fruits);
 
 // 02. splice() : untuk menambah atau menghapus elemen array
-const city = ["New York", "Boston", "Washington DC", "Los Angeles", "Chicago", "Las Vegas"];         
+const city = ['New York', 'Boston', 'Washington DC', 'Los Angeles', 'Chicago', 'Las Vegas'];         
 removed = city.splice(3, 3);
 console.log(removed);
 
@@ -19,22 +19,22 @@ const age = ages.every(checkAge);
 console.log(age);
 
 // 04. fill() : untuk menimpa / mengganti element array 'dapat ditentukan index array yang akan diubah'
-const animals = ["cat", "chicken", "goat", "cow", "bird"];
-const newAnimal = animals.fill("sheep", 2, 3);
+const animals = ['cat', 'chicken', 'goat', 'cow', 'bird'];
+const newAnimal = animals.fill('sheep', 2, 3);
 console.log(newAnimal);
 
 // 05. filter() : untuk menyaring element array yang sesuai dengan kondisi yang ditentukan
-const names = ["Abigail", "Alexandra", "Alison", "Amanda", "Angela"]
-const filter = names.filter(checkName => checkName.toLowerCase().includes("an"));
+const names = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela']
+const filter = names.filter(checkName => checkName.toLowerCase().indexOf('an'));
 console.log(filter);
 
 // 06. from() : untuk mengembalikan array dari objek apapun
-const text = "lamborghini";
+const text = 'lamborghini';
 const toArray = Array.from(text.toUpperCase());
 console.log(toArray);
 
 // 07. pop() : untuk menghapus elemen terakhir dari array dan mengembalikkan element tersebut
-const hobbies = ["swimming", "reading", "singing", "dancing"];
+const hobbies = ['swimming', 'reading', 'singing', 'dancing'];
 const last = hobbies.pop();
 console.log(last);
 
@@ -47,12 +47,12 @@ const average =  grade.reduce(getSum, 0) / grade.length;
 console.log(average);
 
 // 09.shift() : untuk menghapus elemen pertama dari array dan mengembalikkan pertama tersebut
-const myHobby = ["swimming", "reading", "singing", "dancing"];
+const myHobby = ['swimming', 'reading', 'singing', 'dancing'];
 const first = myHobby.shift();
 console.log(first);
 
 // 10.slice() : untuk mengekstrak / memotong bagian dari elemen array dan mengembalikan elemen baru
-const vegetables = ["carrot", "peppers", "cucumber", "potato", "spinach", "broccoli"];
+const vegetables = ['carrot', 'peppers', 'cucumber', 'potato', 'spinach', 'broccoli'];
 const myFavorite = vegetables.slice(2, 5);
 console.log(myFavorite);
 

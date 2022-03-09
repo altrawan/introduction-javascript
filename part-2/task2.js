@@ -6,17 +6,15 @@ const name = [
     "Ella", "Faith", "Olivia", "Penelope"];
 
 const searchName = (key, limit, callback) => {
-    if (typeof key !== "string" || limit === "") {
-        console.log("Key must be string and cannot be null");
-    } else if (typeof limit !== "number" || limit <= 0) {
-        console.log("Limit must be number and more than 0");
+    if (typeof key !== "string" || typeof limit !== "number" || limit <= 0) {
+        console.log("Pastikan semua data sudah sesuai dan limit tidak boleh kurang dari 1");
     } else {
         const filter = name.filter(check => check.toLowerCase().includes(key));
-        callback(limit, filter);
+        callback(filter, limit);
     }
 }
 
-const limitName = (limit, filter) => {
+const limitName = (filter, limit) => {
     const result = filter.slice(0, limit);
     console.log(result);
 }
