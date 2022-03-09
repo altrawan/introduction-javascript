@@ -40,4 +40,5 @@ const biodata = {
     interestInCoding: true
 };
 
-console.log(biodata);
+console.log(biodata.skills[1].skillName);
+// console.log(biodata);
