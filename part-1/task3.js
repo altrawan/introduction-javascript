@@ -5,12 +5,12 @@ if (typeof printSegitiga !== "number" || printSegitiga <= 0) {
 } else {
     /* let i = 5; i > 0; i--
     perulangan eksternal digunakanan untuk membuat batas perulangan angka. */
-    for (let i = 1; i <= printSegitiga; i++) {
+    for (let i = printSegitiga; i > 0; i--) {
         let result = ""; // let result = "" untuk menampung hasil perulangan internal
         /* let j = 1; j <= i; j++
         nilai i akan terus berkurang dimulai dari angka 5, lalu 4, 3, 2 terakhir sesuai dengan kondisi i > 0 yaitu angka 1 */
-        for (let j = 1; j <= printSegitiga - 1; j++) {
-            result += `${printSegitiga} `;
+        for (let j = 1; j <= i; j++) {
+            result += `${j} `;
             // untuk membuat hasil perulangan tampil horizontal.
         }
         // menampilkan hasil perulangan internal
