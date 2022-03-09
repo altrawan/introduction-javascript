@@ -14,7 +14,7 @@ let data = {
 };
   
 // SPREAD OPERATOR
-let newData = {
+const newData = {
     ...data,
     name: "Nur Muhammad Alif Putra Setiawan",
     email: "muhammadalifputra8888@gmail.com",
