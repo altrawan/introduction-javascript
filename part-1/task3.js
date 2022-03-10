@@ -1,7 +1,7 @@
 const printSegitiga = 5;
 
-if (typeof printSegitiga !== "number" || printSegitiga <= 0) {
-    console.log("Data harus number dan tidak boleh kurang dari 1");
+if (typeof printSegitiga !== "number" || printSegitiga < 3) {
+    console.log("Data harus number dan tidak boleh kurang dari 3");
 } else {
     /* let i = 5; i > 0; i--
     perulangan eksternal digunakanan untuk membuat batas perulangan angka. */
@@ -35,4 +35,12 @@ Output :
 5 4 3
 5 4
 5 
+
+Ubah result += `${i} `
+Output
+5 5 5 5 5
+4 4 4 4
+3 3 3
+2 2
+1
 */
