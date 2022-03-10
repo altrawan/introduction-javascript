@@ -7,7 +7,7 @@ console.log(fruits);
 
 // 02. splice() : untuk menambah atau menghapus elemen array
 const city = ['New York', 'Boston', 'Washington DC', 'Los Angeles', 'Chicago', 'Las Vegas'];         
-removed = city.splice(3, 3);
+const removed = city.splice(3, 3);
 console.log(removed);
 
 // 03. every() : untuk mengembalikan nilai true/false dalam kondisi yang dibuat
@@ -24,8 +24,8 @@ const newAnimal = animals.fill('sheep', 2, 3);
 console.log(newAnimal);
 
 // 05. filter() : untuk menyaring element array yang sesuai dengan kondisi yang ditentukan
-const names = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela']
-const filter = names.filter(checkName => checkName.toLowerCase().indexOf('an'));
+const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter']
+const filter = planets.filter(e => e.toLowerCase().includes('er'));
 console.log(filter);
 
 // 06. from() : untuk mengembalikan array dari objek apapun

@@ -3,14 +3,14 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
     if (typeof nilaiAwal !== 'number' || typeof nilaiAkhir !== 'number' || Array.isArray(dataArray) === false) {
         return 'Pastikan semua data sudah sesuai';
     } else if (nilaiAwal > nilaiAkhir) { // validasi nilaiAwal tidak boleh lebih dari nilaiAkhir
-        return "Nilai akhir harus lebih besar dari nilai awal";
+        return 'Nilai akhir harus lebih besar dari nilai awal';
     } else if (dataArray.length < 5) { // validasi jika element array kurang dari 5
-        return `Jumlah angka dalam dataArray harus lebih dari ${nilaiAwal}`;
+        return 'Jumlah angka dalam dataArray harus lebih dari 5';
     } else {
         // untuk menyaring element array jika element lebih besar atau sama dengan nilaiAwal dan element kurang dari atau sama dengan nilaiAkhir
-        const hasil = dataArray.filter(x => x >= nilaiAwal && x <= nilaiAkhir);
+        const hasil = dataArray.filter(e => e >= nilaiAwal && e <= nilaiAkhir);
         // validasi jika panjang element hasil === 0
-        if (hasil.length === 0) return "Nilai tidak ditemukan";
+        if (hasil.length === 0) return 'Nilai tidak ditemukan';
         // jika panjang element hasil !== 0 maka mengembalikkan nilai berupa element hasil yang sudah diurutkan
         return hasil.sort((a, b) => a - b);
     }
