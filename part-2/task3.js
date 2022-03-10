@@ -2,6 +2,8 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
     // validasi untuk mengecek jika semua data yang dimasukkan belum sesuai.
     if (typeof nilaiAwal !== 'number' || typeof nilaiAkhir !== 'number' || Array.isArray(dataArray) === false) {
         return 'Pastikan semua data sudah sesuai';
+    } else if (!dataArray.every(e => typeof e === 'number')) { // validasi untuk mengecek jika terdapat element array yang bukan number
+        return 'Semua element array harus bernilai number';
     } else if (nilaiAwal > nilaiAkhir) { // validasi nilaiAwal tidak boleh lebih dari nilaiAkhir
         return 'Nilai akhir harus lebih besar dari nilai awal';
     } else if (dataArray.length < 5) { // validasi jika element array kurang dari 5
@@ -20,3 +22,9 @@ console.log(seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]));
 console.log(seleksiNilai(15, 3 , [2, 25, 4, 14, 17, 30, 8]));
 console.log(seleksiNilai(5, 17 , [2, 25, 4]));
 console.log(seleksiNilai(5, 17 , [2, 25, 4, 1, 30, 18]));
+console.log(seleksiNilai(5, 20, [true, undefined, "16", 1, null]))
+console.log(seleksiNilai("5", 17, {
+    num1: 1,
+    num2: 2
+}));
+console.log(seleksiNilai());
