@@ -1,0 +1,14 @@
+Algoritma Deteksi Palindrom
+
+1. Mulai.
+2. Masukan teks.
+3. Cek teks yang dimasukkan apakah bertipe data string.
+4. Jika salah maka masukan kembali teks.
+5. Jika benar maka cek teks != "", jika salah kembali masukan teks.
+6. Jika benar maka ke proses deklarasi variabel x yang berisi panjang karakter teks - 1.
+7. Deklarasi variable hasil bertipe data string.
+8. Proses membalikkan huruf di teks menggunakan perulangan dan hasil perulangan di simpan di variable hasil.
+9. Cek apakah teks sama dengan hasil.
+10. Jika salah maka output "bukan palindrome".
+11. Jika benar maka output "palindrome".
+12. Selesai.

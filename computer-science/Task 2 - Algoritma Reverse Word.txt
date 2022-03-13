@@ -1,0 +1,15 @@
+Algoritma Reverse Word
+
+1. Mulai. 
+2. Masukan teks.
+3. Cek teks yang dimasukkan apakah bertipe data string.
+4. Jika salah maka masukan kembali teks.
+5. Jika benar maka cek apakah teks.split(" ").length > 1, jika salah maka masukan kembali teks.
+6. Jika benar maka ke proses deklarasi variabel x yang berisi panjang karakter teks - 1
+7. Deklarasi variabel hasil dan kalimat bertipe data string.
+8. Proses Perulangan dengan kondisi x >= 0 dan perubahan counter decrement 
+9. Jika benar maka lanjut ke percabangan dengan kondisi teks[x] == " " 
+10. Proses ubah variabel kalimat dan hasil menjadi kalimat += hasil + " " dan proses hasil = " ", 
+11. Jika salah maka ke proses hasil = teks[x] + hasil untuk membalikkan string dari variabel teks.
+12. Jika kondisi perulangan tidak memenuhi maka menampilkan nilai variabel kalimat.
+13. Selesai.
