@@ -11,11 +11,11 @@
         const getApi = async(url) => {
             try {
                 const response = await fetch(url);
-                const result = await response.json();
-                const output = result.map((element) => `${element.name}`);
-                console.log(output);
-            } catch (error) {
-                console.log(`Error : ${error.message}`);
+                const data = await response.json();
+                const result = data.map(e => `${e.name}`);
+                console.log(result);
+            } catch (err) {
+                console.log(`Error : ${err.message}`);
             }
         }
         getApi('https://jsonplaceholder.typicode.com/users');

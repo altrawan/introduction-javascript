@@ -14,41 +14,52 @@ const cekHariKerja = (day) => {
     })
 }
 
-// IMPLEMENTASI async/await
-const cekHari = async (day) => {
-    try {
-        if (typeof day !== "string") {
-            console.log("Day name must be string");
-        }  else if (day !== day.toLowerCase()) {
-            console.log("Day name must be lowercase");
-        }
-        const result = await cekHariKerja(day);
-        console.log(result);
-    } catch (error) {
-        console.log(error.message);
-    }
-}
+// =================================== Then Catch =================================== //
+// Then : digunakan untuk menampilkan hasil jika kondisi yang dijalankan sukses / berhasil.
+// Catch: digunakan untuk menangkap atau menampilkan hasil jika kondisi yang dijalankan gagal.
 
-cekHari('senin');
-// TRY digunakan untuk memasukkan atau menyisipkan kode yang akan di cek errornya.
-// CATCH digunakan untuk menangkap pesan error yang terjadi di blok try jika terjadi error.
-
-// IMPLEMENTASI Promise (then catch)
 const cek = (day) => 
 new Promise((resolve, reject) => {
-    if (typeof day !== "string") {
-        reject(new Error("Day name must be string"));
+    if (typeof day !== "string" || day === "") {
+        reject(new Error("Nama hari harus bertipe string dan tidak boleh kosong"));
     } else if (day !== day.toLowerCase()) {
-        reject(new Error("Day name must be lowercase"))
+        reject(new Error("Nama hari harus ditulis dengan huruf kecil"))
     }
     resolve(day);
 });
 
+console.log("Loading...");
 cek('senin')
     .then((day) => cekHariKerja(day))
     .then((day) => console.log(day))
 .catch((error) => {
     console.log(error.message);
-});
-// THEN digunakan untuk menampilkan hasil jika kondisi yang dijalankan sukses / berhasil.
-// CATCH digunakan untuk menangkap atau menampilkan hasil jika kondisi yang dijalankan gagal.
+})
+.finally(() => console.log("Done..."));
+
+// =================================== Then Catch =================================== //
+
+// =================================== Try Catch ==================================== //
+// TRY digunakan untuk memasukkan atau menyisipkan kode yang akan di cek errornya.
+// CATCH digunakan untuk menangkap pesan error yang terjadi di blok try jika terjadi error.
+
+console.log("Loading...");
+const cekHari = async (day) => {
+    try {
+        if (typeof day !== "string" || day === "") {
+            console.log("Nama hari harus bertipe string dan tidak boleh kosong");
+        } else if (day !== day.toLowerCase()) {
+            console.log("Nama hari harus ditulis dengan huruf kecil");
+        }
+        const result = await cekHariKerja(day);
+        console.log(result);
+    } catch (error) {
+        console.log(error.message);
+    } finally {
+        console.log("Done...");
+    }
+}
+
+cekHari('senin');
+
+// =================================== Try Catch ==================================== //

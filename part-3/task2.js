@@ -1,6 +1,6 @@
 const getMonth = (callback) => {
     setTimeout(() => {
-        let error = true
+        let error = false
         let month = ["January", "February", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
         if (!error) {
             callback(null, month)
@@ -14,14 +14,10 @@ const showMonth = (err, month) => {
     setTimeout(() => {
         if (err) {
             console.log(err.message);
+        } else {
+            month.map((e, i) => console.log(`${i += 1}. ${e}`));
         }
-        let result = month.map((element, index) => {
-            return `${index += 1}. ${element}\n`
-        });
-        console.log(result.toString().replaceAll(',', ''));
-    }, 3000);
+    }, 2000);
 }
 
-getMonth((err, month) => {
-    showMonth(err, month);
-})
+getMonth((err, month) => showMonth(err, month));
