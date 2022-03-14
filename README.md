@@ -2,9 +2,14 @@
 Javascript Introduction task in Pijarcamp
 
 ## Tools and Technologies
-1. Javascript Programming Language
-2. Visual Studio Code
-3. draw.io
+1. Algorithm
+2. Flowchart
+3. HTML5
+4. CSS3
+5. Javascript Programming Language
+6. node-fetch
+7. Visual Studio Code
+8. draw.io
 
 ## Support Developer
 1. Follow my account Github

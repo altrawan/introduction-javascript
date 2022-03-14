@@ -2,9 +2,10 @@
 
 ## Tools and Technologies
 1. HTML5
-2. Javascript Programming Language
-3. node-fetch
-4. Visual Studio Code
+2. CSS3
+3. Javascript Programming Language
+4. node-fetch
+5. Visual Studio Code
 
 ## Tasks
 1. Buatlah sambungan program menggunakan then catch dan juga try catch untuk mengecek hari kerja dari kode Asynchronous dibawah dan jelaskan penggunaan then catch dan try catch dengan memberikan komentar di bawahnya:
