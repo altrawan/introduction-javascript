@@ -22,6 +22,8 @@
       .... : ...  
    }
    ```
+   **Hasil:**
+   [https://playcode.io/872507](https://playcode.io/872507)
 2. Buat program yang menghitung rata-rata UN beserta gradenya, dengan mengisi 4 nilai yakni Bahasa indonesia, Bahasa Inggris Matematika dan IPA, yang di dalam program tersebut memiliki validasi yaitu semua nilai tersebut harus diisi, dan juga untuk grade memiliki kondisi dengan ketentuan sebagai berikut:\
 90 - 100 = A\
 80 - 89 = B\
