@@ -88,15 +88,14 @@ Promise.all([a, b, c])
     console.log(error.message);
 });
 
-// // PROGRAM 2 - MENENTUKAN NILAI RATA-RATA UN DAN MENAMPILKAN GRADENYA
+// PROGRAM 2 - MENENTUKAN NILAI RATA-RATA UN DAN MENAMPILKAN GRADENYA
 const getAverage = (bahasaIndonesia, mtk, bahasaInggris, ipa) =>
 new Promise ((resolve, reject) => {
+    const data = bahasaIndonesia || mtk || bahasaInggris || ipa;
     if (typeof bahasaIndonesia !== "number" || typeof mtk !== "number" ||  typeof bahasaInggris !== "number" || typeof ipa !== "number") {
-        reject(new Error("Value is not a number and cannot be null"));
-    } else if (bahasaIndonesia < 0 || mtk < 0 || bahasaInggris < 0 || ipa < 0) {
-        reject(new Error("Minimum value 0"));
-    } else if (bahasaIndonesia > 100 || mtk > 100 || bahasaInggris > 100 || ipa > 100) {
-        reject(new Error("Maximum value 100"));
+        reject(new Error("Semua nilai harus bertipe number"));
+    } else if (data < 0 || data > 100) {
+        reject(new Error("Range semua nilai 0 - 100"));
     } else {
         setTimeout(() => {
             const avg = (bahasaIndonesia + mtk + bahasaInggris + ipa) / 4;
@@ -136,7 +135,7 @@ new Promise ((resolve, reject) => {
                 result = "Sangat Kurang";
                 break;
         }
-        console.log(`Keterangan =  ${result}`);
+        console.log(`Keterangan = ${result}`);
     }, 2000);
 })
 
