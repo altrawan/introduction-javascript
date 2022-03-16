@@ -18,4 +18,4 @@ const showMonth = (err, month) => {
     }
 }
 
-getMonth((err, month) => showMonth(err, month));
+getMonth(showMonth);
