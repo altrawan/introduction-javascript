@@ -33,7 +33,7 @@ Untuk beberapa restoran dikenakan pajak yakni 5% dari harga makanan yang dipesan
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pajak		    : 3750\
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubTotal	  : 55250**
 4. Diberikan sebuah variabel yang berisikan bilangan integer dengan ketentuan angka 0 (nol) dalam variabel tersebut merupakan pemisah antara satu bilangan dengan bilangan lainnya. Bilangan-bilangan tersebut akan dipisah dan diurutkan berdasarkan angka di bilangan-bilangan itu sendiri. Setelah itu, bilangan hasil pengurutan akan digabung kembali dengan tanpa pemisah dengan output berupa bilangan integer. **Buatlah method/function** yang menerima **parameter hanya deret angka** dan menghasilkan output seperti keterangan di atas.
-  ![image]()
+  ![image](https://github.com/altrawan/introduction-javascript/blob/master/code-implementation/Picture1.png)
    
 ## Support Developer
 1. Follow my account Github
