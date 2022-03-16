@@ -1,4 +1,4 @@
-// PROGRAM 1
+// =================================== PROGRAM 1 =================================== //
 const joinBootcamp = (join) =>
   new Promise((resolve, reject) => {
     if (typeof join === "boolean") {
@@ -25,8 +25,9 @@ joinBootcamp(true)
   .then(show)
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
+// =================================== PROGRAM 1 =================================== //
 
-// PROGRAM 2
+// =================================== PROGRAM 2 =================================== //
 const sayGreeting = (name, question) =>
   new Promise((resolve, reject) => {
     if (typeof name !== "string") {
@@ -79,3 +80,4 @@ sayGreeting("Alif", "Will I run Grandma's Marathon in June?")
   .then(magicEightBall)
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
+// =================================== PROGRAM 2 =================================== //
