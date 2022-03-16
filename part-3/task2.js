@@ -11,13 +11,11 @@ const getMonth = (callback) => {
 }
 
 const showMonth = (err, month) => {
-    setTimeout(() => {
-        if (err) {
-            console.log(err.message);
-        } else {
-            month.map((e, i) => console.log(`${i += 1}. ${e}`));
-        }
-    }, 2000);
+    if (err) {
+        console.log(err.message);
+    } else {
+        month.map((e, i) => console.log(`${i += 1}. ${e}`));
+    }
 }
 
 getMonth((err, month) => showMonth(err, month));
