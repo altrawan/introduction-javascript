@@ -7,27 +7,26 @@ const divideAndSort = (num) => {
           let split = num.toString().split(0);
           let result = "";
           split.map(e => {
-              let i = e.split('').sort().join('');
-              result += Number(i);
+              let x = e.split('').sort().join('');
+              result += Number(x);
           });
           const hasil = parseInt(result);
           console.log(`Output : ${hasil}`);
       }
   } else if (typeof num === 'bigint') {
-      let split = num.toString().split('0');
+      let split = num.toString().split(0);
       let result = "";
-      split.map(element => {
-          let i = element.split('').sort().join('');
-          result += Number(i);
+      split.map(e => {
+          let x = e.split('').sort().join('');
+          result += Number(x);
       });
       let output = BigInt(result);
       console.log(`Output : ${output}`);
   } else {
-      console.log("type data must be number or big integer");
+      console.log("deret angka harus bertipe Number atau BigInt");
   }
 }
 
-// divideAndSort(5956560159466056);
-divideAndSort(87438403728367264320673673374);
+divideAndSort(5956560159466056);
 // add n in last parameter, to change variable to bigint type
 // divideAndSort(34824023435543210574326498230432105432123055123123n);
