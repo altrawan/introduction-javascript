@@ -11,17 +11,14 @@ const pijarFood = (harga, voucher, jarak, pajak) => {
         const diskon = discount(harga, voucher);
         const ongkir = deliveryOrder(jarak);
         const ppn = tax(harga, pajak);
-        if (diskon === "") {
-            return false;
-        } else {
-            let subTotal = harga - diskon + ongkir + ppn;
-            console.log(
+        let subTotal = harga - diskon + ongkir + ppn;
+        console.log(
 `Harga       : Rp.${new Intl.NumberFormat('id-ID').format(harga)}
 Potongan    : Rp.${new Intl.NumberFormat('id-ID').format(diskon)}
 Biaya Antar : Rp.${new Intl.NumberFormat('id-ID').format(ongkir)}
 Pajak       : Rp.${new Intl.NumberFormat('id-ID').format(ppn)}
 SubTotal    : Rp.${new Intl.NumberFormat('id-ID').format(subTotal)}`)
-        }
+        
     }    
 }
 

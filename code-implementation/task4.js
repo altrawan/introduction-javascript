@@ -1,8 +1,8 @@
 const divideAndSort = (num) => {
   if (typeof num === 'number') {
       // MAKSIMUM NUMBER IS 9007199254740991 (16 DIGITS)
-      if (num.toString().length > 16) {
-          console.log("Maksimum type data number is 16 digits, change to type data bigint");
+      if (Number.MAX_SAFE_INTEGER) {
+          console.log("Deret angka melebihi maksimal number '9007199254740991'");
       } else {
           let split = num.toString().split(0);
           let result = "";
@@ -27,6 +27,6 @@ const divideAndSort = (num) => {
   }
 }
 
-divideAndSort(5956560159466056);
+divideAndSort(9907199254740999);
 // add n in last parameter, to change variable to bigint type
-// divideAndSort(34824023435543210574326498230432105432123055123123n);
+divideAndSort(34824023435543210574326498230432105432123055123123n);

@@ -1,8 +1,8 @@
 const palindrome = (teks) => {
   if (typeof teks !== "string") {
       console.log("teks harus bertipe string");
-  } else if (teks.length < 3) {
-      console.log("teks minimal 3 karakter");
+  } else if (teks.length < 1) {
+      console.log(`${teks} : palindrome`);
   } else {
       let x = teks.length - 1;
       let result = "";
@@ -20,4 +20,4 @@ const palindrome = (teks) => {
 palindrome("");
 palindrome("Aa");
 palindrome("Siang");
-palindrome("Malam")
+palindrome("Malam");
