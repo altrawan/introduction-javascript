@@ -1,9 +1,7 @@
 // PROGRAM 1 - PENGECEKAN KATA PALINDROM
 const palindrome = (teks) => {
-  if (typeof teks !== "string") {
+  if (typeof teks !== "string" || teks === "") {
       console.log("teks harus bertipe string");
-  } else if (teks.length < 1) {
-      console.log(`${teks} : palindrome`);
   } else {
       let x = teks.length - 1;
       let result = "";

@@ -54,8 +54,9 @@ const tax = (harga, pajak) => {
     return pajak ? 5 / 100 * harga : 0;
 }
 
-pijarFood(500, 'PIJARFOOD5', 5, true);
-pijarFood(75000, null, 5, true);
-pijarFood(75000, 'PIJARFOOD', 5, null);
-pijarFood(75000, 'PIJARFOOD5', 5, true);
-pijarFood(25000, 'PIJARFOOD5', 2, true);
+// pijarFood(500, 'PIJARFOOD5', 5, true);
+// pijarFood(75000, null, 5, true);
+// pijarFood(75000, 'PIJARFOOD', 5, null);
+// pijarFood(75000, 'PIJARFOOD5', 5, true);
+// pijarFood(25000, 'PIJARFOOD5', 2, true);
+pijarFood(45000, 'DITRAKTIRPIJAR', 5, true)
