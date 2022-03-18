@@ -32,11 +32,11 @@ const discount = (harga, voucher) => {
             console.log(`Voucher ${voucher} minimal pembelian Rp.50000, dilanjutkan tanpa diskon`);
             return 0;
         case "DITRAKTIRPIJAR":
-            if (harga >= 30000) {
+            if (harga >= 25000) {
                 let diskon = 60 / 100 * harga;
-                return diskon >= 25000 ? 25000 : diskon;
+                return diskon >= 30000 ? 30000 : diskon;
             }
-            console.log(`Voucher ${voucher} minimal pembelian Rp.30000, dilanjutkan tanpa diskon`);
+            console.log(`Voucher ${voucher} minimal pembelian Rp.25000, dilanjutkan tanpa diskon`);
             return 0;
         case false:
             return 0;
@@ -59,4 +59,4 @@ pijarFood(75000, null, 5, true);
 pijarFood(75000, 'PIJARFOOD', 5, null);
 pijarFood(75000, 'PIJARFOOD5', 5, true);
 pijarFood(25000, 'PIJARFOOD5', 2, true);
-pijarFood(30000, 'DITRAKTIRPIJAR', 5, true);
+pijarFood(45000, 'DITRAKTIRPIJAR', 5, true);
