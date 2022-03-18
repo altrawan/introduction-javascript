@@ -1,61 +1,32 @@
-const pijarFood = (harga, voucher, jarak, pajak) => {
-    if (typeof harga !== 'number' || harga < 1000) {
-        console.log("Harga harus bertipe data 'number' dan tidak boleh kurang dari '1000'");
-    } else if (typeof voucher !== 'string' && typeof voucher !== 'boolean') {
-        console.log("Voucher harus bertipe data 'string' atau 'boolean'");
-    } else if (typeof jarak !== 'number' || jarak < 1) {
-        console.log("Jarak harus bertipe data 'number' dan tidak boleh kurang dari '1'");
-    } else if (typeof pajak !== 'boolean') {
-        console.log("Pajak harus bertipe data 'boolean'");
+const divideAndSort = (num) => {
+    if (typeof num === 'number') {
+        // MAKSIMUM NUMBER IS 9007199254740991 (16 DIGITS)
+        if (Number.MAX_SAFE_INTEGER) {
+            console.log("Deret angka melebihi maksimal number '9007199254740991'");
+        } else {
+            let split = num.toString().split(0);
+            let result = "";
+            split.map(e => {
+                let x = e.split('').sort().join('');
+                result += Number(x);
+            });
+            const hasil = parseInt(result);
+            console.log(`Output : ${hasil}`);
+        }
+    } else if (typeof num === 'bigint') {
+        let split = num.toString().split(0);
+        let result = "";
+        split.map(e => {
+            let x = e.split('').sort().join('');
+            result += Number(x);
+        });
+        let output = BigInt(result);
+        console.log(`Output : ${output}`);
     } else {
-        const diskon = discount(harga, voucher);
-        const ongkir = deliveryOrder(jarak);
-        const ppn = tax(harga, pajak);
-        let subTotal = harga - diskon + ongkir + ppn;
-        console.log(
-`Harga       : Rp.${new Intl.NumberFormat('id-ID').format(harga)}
-Potongan    : Rp.${new Intl.NumberFormat('id-ID').format(diskon)}
-Biaya Antar : Rp.${new Intl.NumberFormat('id-ID').format(ongkir)}
-Pajak       : Rp.${new Intl.NumberFormat('id-ID').format(ppn)}
-SubTotal    : Rp.${new Intl.NumberFormat('id-ID').format(subTotal)}`)
-        
-    }    
-}
-
-const discount = (harga, voucher) => {
-    switch (voucher) {
-        case "PIJARFOOD5":
-            if (harga >= 50000) {
-                let diskon = 50 / 100 * harga;
-                return diskon >= 50000 ? 50000 : diskon;
-            }
-            console.log(`Voucher ${voucher} minimal pembelian Rp.50000, dilanjutkan tanpa diskon`);
-            return 0;
-        case "DITRAKTIRPIJAR":
-            if (harga >= 30000) {
-                let diskon = 60 / 100 * harga;
-                return diskon >= 25000 ? 25000 : diskon;
-            }
-            console.log(`Voucher ${voucher} minimal pembelian Rp.30000, dilanjutkan tanpa diskon`);
-            return 0;
-        case false:
-            return 0;
-        default:
-            console.log(`Voucher ${voucher} tidak ditemukan, dilanjutkan tanpa diskon`);
-            return 0;
+        console.log("deret angka harus bertipe Number atau BigInt");
     }
-}
-
-const deliveryOrder = (jarak) => {
-    return jarak <= 2 ? 5000 : (jarak - 2) * 3000 + 5000;
-}
-
-const tax = (harga, pajak) => {
-    return pajak ? 5 / 100 * harga : 0;
-}
-
-// pijarFood(500, 'PIJARFOOD5', 5, true);
-// pijarFood(75000, null, 5, true);
-// pijarFood(75000, 'PIJARFOOD', 5, null);
-// pijarFood(75000, 'PIJARFOOD5', 5, true);
-// pijarFood(25000, 'PIJARFOOD5', 2, true);
+  }
+  
+  divideAndSort(9907199254740999);
+  // add n in last parameter, to change variable to bigint type
+  divideAndSort(34824023435543210574326498230432105432123055123123n);
